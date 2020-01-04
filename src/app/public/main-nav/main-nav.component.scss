@@ -1,0 +1,22 @@
+@import './../../../assets/css/variables.scss';
+
+nav {
+    height: 35px;
+    top: 0;
+    z-index: 1;
+
+    .nav-list {
+        display: flex;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+
+        .list-item {
+            border-radius: 0;
+        }
+    }
+}
+
+.fixed {
+    position: fixed;
+}

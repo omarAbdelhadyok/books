@@ -1,0 +1,17 @@
+<div class="text-center"
+    *ngIf="isNoData">
+    {{noDataMsg}}
+</div>
+
+<div class="text-center" 
+    *ngIf="isError">
+    {{errorMsg}}
+</div>
+
+<div class="loader-box"
+    *ngIf="isLoading">
+    <mat-progress-spinner
+        color="primary"
+        mode="indeterminate">
+    </mat-progress-spinner>
+</div>

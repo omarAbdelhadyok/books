@@ -1,0 +1,22 @@
+@import './../../../../assets/css/variables.scss';
+
+mat-toolbar {
+    height: auto;
+    font-size: 18px;
+
+    .links {
+        display: flex;
+        align-items: center;
+
+        .link {
+            color: $primary;
+            text-decoration: underline;
+    
+            &:hover {
+                cursor: pointer;
+                color: $accent;
+            }
+        }
+    }
+    
+}

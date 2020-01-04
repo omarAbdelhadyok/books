@@ -1,1 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Cairo', sans-serif !important; color: #333; height: 1000px;}
+
+h1, h2, h3, h4, h5, h6, p, div, button, a {
+    font-family: 'Cairo', sans-serif !important;
+}
+
+input {
+    font-family: 'Cairo', sans-serif !important;
+
+    &::placeholder {
+        font-family: 'Cairo', sans-serif !important;
+    }
+}
+
+
+
+.text-center {
+    text-align: center;    
+}
+
+.text-gray {
+    color: #777;
+}
+
+
+
+.mat-divider {
+    margin: 5px 0 5px 0 !important;
+}

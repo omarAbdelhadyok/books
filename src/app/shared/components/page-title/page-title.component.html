@@ -1,0 +1,23 @@
+<mat-toolbar class="row">
+    <div class="col-12 col-md-8  links">
+        <span [ngClass]="{'link': superLink}"
+            (click)="navigateToSuper()">
+            {{super}}
+        </span>
+        <mat-icon *ngIf="section">keyboard_arrow_left</mat-icon>
+        <span [ngClass]="{'link': sectionLink}"
+            (click)="navigateToSection()">
+            {{section}}
+        </span>
+        <mat-icon *ngIf="state">keyboard_arrow_left</mat-icon>
+        {{state}}
+    </div>
+    <div class="col-12 col-md-4 text-left"
+        *ngIf="buttonText">
+        <button mat-button
+            (click)="onLeftBtnClick()">
+            {{buttonText}}
+        </button>
+    </div>
+
+</mat-toolbar>

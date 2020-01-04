@@ -1,0 +1,48 @@
+<nav class="container-fluid static"
+    #nav>
+    <div class="nav-list">
+        <button mat-button
+            class="list-item">
+            الرئيسية
+        </button>
+        <button mat-button
+            class="list-item"
+            [matMenuTriggerFor]="menu">
+            التصنيفات
+        </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item
+                *ngFor="let cat of categories"
+                routerLink="/books/view/{{cat.id}}/{{cat.name}}">
+                {{cat.name}}
+            </button>
+        </mat-menu>
+        <button mat-button
+            class="list-item">
+            عن علمني
+        </button>
+        <button mat-button
+            class="list-item">
+            تواصل معنا
+        </button>
+    </div>
+</nav>
+
+<nav class="container-fluid fixed"
+    #navTwo
+    [@toggleNav]="navState">
+    <ul class="nav-list">
+        <li class="nav-list-item">
+            الرئيسية
+        </li>
+        <li class="nav-list-item">
+            تصنيفات الكتب
+        </li>
+        <li class="nav-list-item">
+            عنا
+        </li>
+        <li class="nav-list-item">
+            تواصل معنا
+        </li>
+    </ul>
+</nav>

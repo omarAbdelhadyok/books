@@ -1,0 +1,22 @@
+<section class="mt-2">
+    <app-page-title super="الرئيسية"
+        superLink="/"
+        [section]="pageTitle">
+    </app-page-title>
+
+    <mat-divider class="mat-divider"></mat-divider>
+
+    <div class="row"
+        *ngIf="books.length > 0">
+        <div class="col-12">
+            <app-book-viewer *ngFor="let book of books"
+                [book]="book">
+            </app-book-viewer>
+        </div>
+    </div>
+
+    <app-binding-helper [isLoading]="loading"
+        [isNoData]="books.length === 0 && noData"
+        [isError]="books.length === 0 && !noData">
+    </app-binding-helper>
+</section>
